@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/mystyle.css">
+    <title>Stylistic Form</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="btnContainer2">
+                <button type="button" id="backbtn" onclick="goback()">go back</button>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="container-fluid">
+            <div class="row" id="shake">
+                <h1>Q1. how many hours of sleep do you get a night ?</h1>
+                <code id="inputError"></code>
+                <div class="btnContainer">
+                    <input type="text" id="q1">
+                </div>
+            </div>
+           
+        </div>
+        
+    </div>
+   
+<script>
+    function goback(){
+        location.replace("index.html")
+    }
+    function validateentry(){
+        var q1ans = document.getElementById("q1").value;
+        var errmsg = document.getElementById("inputError");
+        var quesDiv = document.getElementById("shake").style;
+        console.log(+q1ans);
+        console.log(typeof +q1ans)
+        function resetinp(){
+            document.getElementById('q1').value = ''
+        }
+        
+        if(isNaN(q1ans)){
+            console.log("Please enter a number between 1 - 24");
+            quesDiv.animationName = "shake";
+           
+            errmsg.innerHTML = "Please enter a number between 1 - 24"
+        }else if(+q1ans >= 24 || +q1ans < 1 ) {
+            console.log("Please enter a number between 1 - 24");
+            quesDiv.animationName = "shake2";
+            
+            errmsg.innerHTML = "Please enter a number between 1 - 24"
+        }else{
+            location.replace("q2.html");
+        }
+        
+        resetinp();
+
+    }
+    
+    document.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+        console.log('Enter is pressed!');
+        validateentry();
+        }
+    });
+    
+</script>
+</body>
+</html>
