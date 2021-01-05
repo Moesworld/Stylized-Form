@@ -122,3 +122,60 @@ input:hover{
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+.flexbox1{
+    width: 50%;
+    margin: auto;
+    align-items: center;
+
+    
+}
+
+.progressBar{
+    position: relative;
+    background-color:black;
+    width: 50px;
+    height: 50px;
+    bottom: -3.1cm;
+
+    border-radius: 50%;
+}
+
+.circle2{
+    position: relative;
+    left: 450px;
+    bottom: -38px ;
+    background-color:black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.line{
+    background-color:black;
+    position: absolute;
+    width:500px;
+    height: 5px;
+}
+
+.w3-light-grey{
+    background-color:gainsboro;
+    border-radius: 30px;
+
+}
+
+.w3-blue{
+    background-color:lightskyblue;
+    border-radius: 30px;
+    width: 0%;   
+}
+
+.padme{
+    padding: 50px;
+    width: 50%;
+    min-width: 500px;
+}
+
+#lftpad{
+    padding-left: 10px;
+}
+

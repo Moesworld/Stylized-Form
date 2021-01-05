@@ -25,6 +25,15 @@
                     <button type="button" onclick="NextPage()">Start</button>
                 </div>
             </div>
+           <div class="row">
+            <div class="container padme">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" id="stBar"><p id="lftpad"></p> </div>
+                </div>
+            </div>
+           </div>
+           
+           
            
         </div>
         
@@ -32,6 +41,7 @@
    
 <script>
     var codesnip = document.getElementById("cntr");
+    var progBar = document.getElementById("stBar");
     var counter = 3;
     codesnip.innerHTML="Press start "+ counter +" times so we make sure you are not a bot"
     function NextPage(){  

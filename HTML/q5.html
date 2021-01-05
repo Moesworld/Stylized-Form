@@ -29,10 +29,19 @@
             </div>
            
         </div>
-        
+        <div class="row">
+            <div class="container padme">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" id="stBar"><p id="lftpad">0</p> </div>
+                </div>
+            </div>
+        </div>
     </div>
    
 <script>
+    var progBar = document.getElementById("stBar");
+    progBar.style.width = "80%";
+    progBar.innerHTML = "80%";
     function goback(){
         location.replace("q4.html")
     }
