@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# Stylized-Form
-=======
+
 # Stylized Form
 
 A form that has multiple templates that allows you to pick from before begining the form, as well as allow you to answer
@@ -21,4 +19,3 @@ Please make sure to update tests as appropriate.
 
 ## License
 Offline Media 2020 ®
->>>>>>> master
