@@ -5,11 +5,11 @@ body{
     margin: auto;
     widows: 100%;
     padding: 10px;
-    background-color: blanchedalmond;
     position: absolute;
     top: 45vh;
     width: 100vw;
     text-align: center;
+    z-index: 2;
 }
 
 button{
@@ -25,6 +25,11 @@ button{
     background-color: aliceblue;
     color:  rgb(141, 110, 172);
     border-style: none;
+}
+
+.devby{
+    color:blanchedalmond;;
+    font-size: 100px;
 }
 
 #backbtn{
@@ -122,6 +127,28 @@ input:hover{
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+@keyframes ltoR {
+    0%{
+        transform: translate(-200px, 0px);
+        transition: ease-in-out;
+        opacity: 0;
+    }
+    50%{
+        transform: translate(200px, 0px);
+        transition: ease-in-out;
+        width: 100px;
+        z-index: 1;
+        opacity: 1;
+        background-color:rgb(252, 161, 161); 
+    }
+  
+    100%{
+        transform: translate(-200px, 0px);
+        transition: ease-in-out;
+        opacity: 0;
+        
+    }
+}
 .flexbox1{
     width: 50%;
     margin: auto;
@@ -136,18 +163,25 @@ input:hover{
     width: 50px;
     height: 50px;
     bottom: -3.1cm;
-
     border-radius: 50%;
 }
 
 .circle2{
+    margin: auto;
     position: relative;
-    left: 450px;
-    bottom: -38px ;
-    background-color:black;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    background-color:gold;
+    width: 1px;
+    border-style: none;
+    height: 50px;
+    z-index: 1;
+    animation-name: ltoR;
+    animation-duration: 5s;
+    opacity: 0;
+    animation-iteration-count: infinite;
+}
+
+.circle2:hover{
+    animation-name: "shake";
 }
 
 .line{
@@ -173,9 +207,12 @@ input:hover{
     padding: 50px;
     width: 50%;
     min-width: 500px;
+    color: aliceblue;
 }
 
 #lftpad{
     padding-left: 10px;
 }
+
+
 
