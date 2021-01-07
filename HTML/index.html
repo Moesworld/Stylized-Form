@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/mystyle.css">
+    <title>Stylistic Form</title>
+</head>
+<body>
+    <div class="center">
+        <div class="container-fluid">
+            <div class="row">
+                <h1>Welcome to the stylistic form</h1>
+                <p>
+                    This web app allows you to answer a series of questions 
+                    that will visually keep you engaged.<br>
+                    <code id="cntr"></code>
+                </p>
+                
+                <div class="btnContainer">
+                    <button type="button" onclick="NextPage()">Start</button>
+                </div>
+            </div>
+           <div class="row">
+            <div class="container padme">
+                <div class="w3-light-grey w3-round">
+                    <div class="w3-container w3-round w3-blue" id="stBar"><p id="lftpad"></p> </div>
+                </div>
+            </div>
+           </div>
+           
+           
+           
+        </div>
+        
+    </div>
+   
+<script>
+    var codesnip = document.getElementById("cntr");
+    var progBar = document.getElementById("stBar");
+    var counter = 3;
+    codesnip.innerHTML="Press start "+ counter +" times so we make sure you are not a bot"
+    function NextPage(){  
+        --counter;
+        codesnip.innerHTML="Press start "+ counter +" times so we make sure you are not a bot"
+        if (counter == 0){
+            location.replace("q1.html")
+        } 
+    }
+</script>
+</body>
+</html>
