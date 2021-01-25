@@ -1,0 +1,20 @@
+.btnContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  button{
+    position: relative;
+    width: 50%;
+    max-width: 400px;
+    min-width: 100px;
+    height: 40px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 30px;
+    background-color: aliceblue;
+    color:  rgb(141, 110, 172);
+    border-style: none;
+  }

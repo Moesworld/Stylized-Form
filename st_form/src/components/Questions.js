@@ -1,10 +1,17 @@
 import React from 'react'
+import {useState} from 'react'
+import './Questions.css'
+import Question from './Question';
 
-function Questions(props) {
+
+
+function Questions({questions, nextQ}) {
+   
     return (
-        <div>
-            <h1> {props.text}</h1>
-        </div>
+        <>
+            <Question  questions={questions} nextQ={nextQ}/>
+            
+        </>
     )
 }
 

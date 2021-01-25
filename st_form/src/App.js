@@ -1,44 +1,76 @@
 
 import './App.css';
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import Questions from './components/Questions';
+import Button from './components/Button';
 
 
-class App extends Component {
+const App = () =>{
 
-constructor(props){
-  super(props);
-  this.state={
-    question : "Hello world",
-    answer : "",
-    counter: 0,
+  //here we can add and manipulate variables
+  //const welcomemsg = "Welcome to the stylistic form";
+  let [nextQ, setNext] = useState(0);
+  const [questions, setQuestions] = useState([
+    {
+    id : 1,
+    text: 'Q1. how many hours of sleep do you get a night ?',
+    hint: 'hint: this should help you', 
+    answered : false, 
+  },
+  {
+    id : 2,
+    text: 'Q2. What is your favourite sport ?',
+    hint: 'hint: this should help you', 
+    answered : false, 
+  },
+  {
+    id : 3,
+    text: 'Q3. Where do you see yourself in 10 years?',
+    hint: 'hint: this should help you', 
+    answered : false, 
+  },
+  {
+    id : 4,
+    text: 'Q4. What is your most recent search on google ?',
+    hint: 'hint: this should help you', 
+    answered : false, 
+  },
+  {
+    id : 5,
+    text: 'Q5. What is your income ?',
+    hint: 'hint: this should help you', 
+    answered : false, 
+  },
+  {
+    id : 6,
+    text: 'Q6. how much time do you spend on social-media ?',
+    hint: 'hint: this should help you', 
+    answered : false, 
   }
-};
-
-
-nextPage(){
-  var questions = ["Q1. ", "Q2", "Q3", "Q4", "Q5", "Q6"];
-  console.log("click");
-  
-}
-
-render() {
+  ]);
+  const nextQuestion = () =>{
+    if(nextQ == 5){
+      setNext(0)
+    }else{
+      setNext(++nextQ)
+    }
+   
+    console.log(nextQ)
+  }
   return (
     
     <div className="App">
       <div className="center">
           <div className="container-fluid">
               <div className="row">
-                  < Questions text={this.state.question}/>
+                  < Questions questions={questions} nextQ={nextQ}/>
                   <p>
                       This web app allows you to answer a series of questions 
                       that will visually keep you engaged.
                       <code id="cntr"></code>
                   </p>
                   
-                  <div className="btnContainer">
-                      <button type="button" onClick={this.nextPage}>Start</button>
-                  </div>
+                  < Button onClick={nextQuestion}/>
               </div>
             <div className="row">
               <div className="container padme">
@@ -57,6 +89,5 @@ render() {
       </div>
     </div>
   );
-}
 }
 export default App;

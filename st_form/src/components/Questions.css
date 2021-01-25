@@ -1,0 +1,21 @@
+
+
+.question{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+    padding-bottom: 10px;
+    
+}
+
+.fifty{
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+}
