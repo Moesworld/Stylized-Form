@@ -1,23 +1,35 @@
 
 import './App.css';
 import React, {Component} from 'react';
+import Questions from './components/Questions';
+
 
 class App extends Component {
+
 constructor(props){
   super(props);
   this.state={
     question : "Hello world",
-    answer : ""
+    answer : "",
+    counter: 0,
   }
 };
 
+
+nextPage(){
+  var questions = ["Q1. ", "Q2", "Q3", "Q4", "Q5", "Q6"];
+  console.log("click");
+  
+}
+
 render() {
   return (
+    
     <div className="App">
       <div className="center">
           <div className="container-fluid">
               <div className="row">
-                  <h1>Welcome to the stylistic form</h1>
+                  < Questions text={this.state.question}/>
                   <p>
                       This web app allows you to answer a series of questions 
                       that will visually keep you engaged.
@@ -25,7 +37,7 @@ render() {
                   </p>
                   
                   <div className="btnContainer">
-                      <button type="button" onclick="NextPage()">Start</button>
+                      <button type="button" onClick={this.nextPage}>Start</button>
                   </div>
               </div>
             <div className="row">
