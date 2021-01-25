@@ -17,4 +17,9 @@
     background-color: aliceblue;
     color:  rgb(141, 110, 172);
     border-style: none;
+    outline:none;
+  }
+
+  button:focus {
+    outline:0;
   }
